@@ -4,28 +4,36 @@
   <title>So John's</title>
   <style>
     body {
+      height: 100vh;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      cursor: none;
     }
     h1 {
       text-align: center;
       font-family: Arial, sans-serif;
       font-size: 48px;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-  </style>
+    </style>
 </head>
 <body>
   <h1 id="title">So John's</h1>
 
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('mousemove', (event) => {
       const title = document.getElementById('title');
-      const message = 'So John\'s?';
-      title.textContent = message;
-      window.speechSynthesis.speak(new SpeechSynthesisUtterance(message));
+      const xPos = event.clientX;
+      const yPos = event.clientY;
+      title.style.left = xPos + 'px';
+      title.style.top = yPos + 'px';
     });
   </script>
 </body>
