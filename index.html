@@ -358,12 +358,12 @@
   <div class="instruction">Click the ball again for another answer.</div>
   //-->
   <script>
-    // JavaScript code to handle the click event
+    // JavaScript code to handle the touch event
     document.addEventListener("DOMContentLoaded", function() {
       var ball = document.querySelector(".ball");
       var input = document.querySelector(".eight input");
 
-      ball.addEventListener("click", function() {
+      ball.addEventListener("touchstart", function() {
         input.checked = !input.checked;
       });
     });
