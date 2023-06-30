@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -356,5 +357,16 @@
   <div class="instruction">The answer will appear in the window.</div>
   <div class="instruction">Click the ball again for another answer.</div>
   //-->
+  <script>
+    // JavaScript code to handle the click event
+    document.addEventListener("DOMContentLoaded", function() {
+      var ball = document.querySelector(".ball");
+      var input = document.querySelector(".eight input");
+
+      ball.addEventListener("click", function() {
+        input.checked = !input.checked;
+      });
+    });
+  </script>
 </body>
 </html>
