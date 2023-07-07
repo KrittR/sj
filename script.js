@@ -12,7 +12,7 @@ $(document).ready(function(){
     $("#8ball").effect( "shake" );
     $("#answer").text( answer );
     $("#answer").fadeIn(3000);
-    $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/answerside.png");
+    $("#8ball").attr("src", "answerside.png");
 
     console.log(question);
     console.log(answer);
@@ -23,7 +23,7 @@ $(document).ready(function(){
   var onClick = function()
   {
     $("#answer").hide();
-    $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png");
+    $("#8ball").attr("src", "magic8ballQuestion.png");
     var question = "What do you want to know?"; // Removed the prompt and set the question directly
     magic8Ball.getAnswer(question);
   };
